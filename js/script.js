@@ -12,3 +12,38 @@ console.log("Hi Kik");
 // Angela Lopez		Social Media Manager	angela - lopez - social - media - manager.jpg
 // Scott Estrada		Developer				scott - estrada - developer.jpg
 // Barbara Ramos		Graphic Designer		barbara - ramos - graphic - designer.jpg
+
+
+// Creo un array di oggetti
+let our_team = [
+    {   // WAYNE
+        name : "Wayne Barnett",
+        role : "Founder & CEO",
+        photo : "./img/wayne-barnett-founder-ceo.jpg",
+    },
+    {   // ANGELA C.
+        name: "Angela Carroll",
+        role: "Chief Editor",
+        photo: "./img/angela-carroll-chief-editor.jpg",
+    },
+    {   // WALTER
+        name: "Walter Gordon",
+        role: "Office Manager",
+        photo: "./img/walter-gordon-office-manager.jpg",
+    },
+    {   // ANGELA L.
+        name: "Angela Lopez",
+        role: "Social Media Manager",
+        photo: "./img/angela-lopez-social-media-manager.jpg",
+    },
+    {   // SCOTT
+        name: "Scott Estrada",
+        role: "Developer",
+        photo: "./img/scott-estrada-developer.jpg",
+    },
+    {   // BARBARA
+        name: "Barbara Ramos",
+        role: "Graphic Designer",
+        photo: "./img/brabara-ramos-graphic-designer.jpg",
+    },
+];
