@@ -1,4 +1,5 @@
-console.log("Hi Kik");
+// console.log("Hi Kik");
+
 
 // Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 // Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
@@ -44,6 +45,36 @@ let our_team = [
     {   // BARBARA
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        photo: "./img/brabara-ramos-graphic-designer.jpg",
+        photo: "./img/barbara-ramos-graphic-designer.jpg",
     },
 ];
+
+
+// MILESTONE 1: stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+    // stampo Wayne
+console.log(our_team[0].name + ", " + our_team[0].role + " --- " + our_team[0].photo);
+    // stampo Angela C.
+console.log(our_team[1].name + ", " + our_team[1].role + " --- " + our_team[1].photo);
+    // stampo Walter
+console.log(our_team[2].name + ", " + our_team[2].role + " --- " + our_team[2].photo);
+    // stampo Angela L.
+console.log(our_team[3].name + ", " + our_team[3].role + " --- " + our_team[3].photo);
+    // stampo Scott
+console.log(our_team[4].name + ", " + our_team[4].role + " --- " + our_team[4].photo);
+    // stampo Barbara
+console.log(our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo);
+
+
+// MILESTONE 2: stampare le stesse informazioni su DOM sottoforma di stringhe
+// stampo Wayne
+document.querySelector(".wayne").innerHTML = our_team[0].name + ", " + our_team[0].role + " --- " + our_team[0].photo
+// stampo Angela C.
+document.querySelector(".angela-c").innerHTML = our_team[1].name + ", " + our_team[1].role + " --- " + our_team[1].photo;
+// stampo Walter
+document.querySelector(".walter").innerHTML = our_team[2].name + ", " + our_team[2].role + " --- " + our_team[2].photo;
+// stampo Angela L.
+document.querySelector(".angela-l").innerHTML = our_team[3].name + ", " + our_team[3].role + " --- " + our_team[3].photo;
+// stampo Scott
+document.querySelector(".scott").innerHTML = our_team[4].name + ", " + our_team[4].role + " --- " + our_team[4].photo;
+// stampo Barbara
+document.querySelector(".barbara").innerHTML = our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo;
