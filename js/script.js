@@ -14,6 +14,11 @@
 // Scott Estrada		Developer				scott - estrada - developer.jpg
 // Barbara Ramos		Graphic Designer		barbara - ramos - graphic - designer.jpg
 
+// BONUS 1:
+// Trasformare la stringa foto in una immagine effettiva
+// BONUS 2:
+// Organizzare i singoli membri in card / schede
+
 
 // Creo un array di oggetti
 let our_team = [
@@ -51,18 +56,29 @@ let our_team = [
 
 
 // MILESTONE 1: stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-    // stampo Wayne
-console.log(our_team[0].name + ", " + our_team[0].role + " --- " + our_team[0].photo);
-    // stampo Angela C.
-console.log(our_team[1].name + ", " + our_team[1].role + " --- " + our_team[1].photo);
-    // stampo Walter
-console.log(our_team[2].name + ", " + our_team[2].role + " --- " + our_team[2].photo);
-    // stampo Angela L.
-console.log(our_team[3].name + ", " + our_team[3].role + " --- " + our_team[3].photo);
-    // stampo Scott
-console.log(our_team[4].name + ", " + our_team[4].role + " --- " + our_team[4].photo);
-    // stampo Barbara
-console.log(our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo);
+//     // stampo Wayne
+// console.log(our_team[0].name + ", " + our_team[0].role + " --- " + our_team[0].photo);
+//     // stampo Angela C.
+// console.log(our_team[1].name + ", " + our_team[1].role + " --- " + our_team[1].photo);
+//     // stampo Walter
+// console.log(our_team[2].name + ", " + our_team[2].role + " --- " + our_team[2].photo);
+//     // stampo Angela L.
+// console.log(our_team[3].name + ", " + our_team[3].role + " --- " + our_team[3].photo);
+//     // stampo Scott
+// console.log(our_team[4].name + ", " + our_team[4].role + " --- " + our_team[4].photo);
+//     // stampo Barbara
+// console.log(our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo);
+
+// "Al momento accedi singolarmente ad ogni elemento con l'indice scritto come intero, mentre potresti farlo con un ciclo." let's try!
+    // così avrei potuto richiamare solo un componente del team:
+    // console.log(our_team[0]);
+    // e così solo il suo nome
+    // console.log(our_team[0].name);
+// siccome è un array si usa OF (IN è per il "for in" degli objects)
+for (let people of our_team) {
+    console.log(people);
+}
+
 
 
 // MILESTONE 2: stampare le stesse informazioni su DOM sottoforma di stringhe
@@ -78,3 +94,8 @@ document.querySelector(".angela-l").innerHTML = our_team[3].name + ", " + our_te
 document.querySelector(".scott").innerHTML = our_team[4].name + ", " + our_team[4].role + " --- " + our_team[4].photo;
 // stampo Barbara
 document.querySelector(".barbara").innerHTML = our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo;
+
+
+
+
+
