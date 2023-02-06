@@ -14,8 +14,8 @@
 // Scott Estrada		Developer				scott - estrada - developer.jpg
 // Barbara Ramos		Graphic Designer		barbara - ramos - graphic - designer.jpg
 
-// BONUS 1: trasformare la stringa foto in una immagine effettiva -- BOH
-// BONUS 2: organizzare i singoli membri in card / schede
+// BONUS 1: trasformare la stringa foto in una immagine effettiva -- ok!!!
+// BONUS 2: organizzare i singoli membri in card / schede -- ok!!!
 
 
 // Creo un array di oggetti
@@ -23,34 +23,32 @@ let our_team = [
     {   // WAYNE
         name : "Wayne Barnett",
         role : "Founder & CEO",
-        photo : "./img/wayne-barnett-founder-ceo.jpg",
-        // photo : wayne_img,
-        // photo : (src = "../img/wayne-barnett-founder-ceo.jpg"),
+        photo : "../img/wayne-barnett-founder-ceo.jpg",
     },
     {   // ANGELA C.
-        name: "Angela Carroll",
+        name: "Angela Caroll",
         role: "Chief Editor",
-        photo: "./img/angela-carroll-chief-editor.jpg",
+        photo: "../img/angela-caroll-chief-editor.jpg",
     },
     {   // WALTER
         name: "Walter Gordon",
         role: "Office Manager",
-        photo: "./img/walter-gordon-office-manager.jpg",
+        photo: "../img/walter-gordon-office-manager.jpg",
     },
     {   // ANGELA L.
         name: "Angela Lopez",
         role: "Social Media Manager",
-        photo: "./img/angela-lopez-social-media-manager.jpg",
+        photo: "../img/angela-lopez-social-media-manager.jpg",
     },
     {   // SCOTT
         name: "Scott Estrada",
         role: "Developer",
-        photo: "./img/scott-estrada-developer.jpg",
+        photo: "../img/scott-estrada-developer.jpg",
     },
     {   // BARBARA
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        photo: "./img/barbara-ramos-graphic-designer.jpg",
+        photo: "../img/barbara-ramos-graphic-designer.jpg",
     },
 ];
 
@@ -82,6 +80,7 @@ for (let people of our_team) {
 
 
 // MILESTONE 2: stampare le stesse informazioni su DOM sottoforma di stringhe 
+    // commento dalla prossima linea fino a "_team[5].photo;"
 
 // // stampo Wayne
 // document.querySelector(".wayne").innerHTML = our_team[0].name + ", " + our_team[0].role + " --- " + our_team[0].photo
@@ -97,24 +96,21 @@ for (let people of our_team) {
 // document.querySelector(".barbara").innerHTML = our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo;
 
 
-// BONUS 1 - boh
-// let wayne_img = new Image(200, 200);
-// wayne_img.src ="../img/wayne-barnett-founder-ceo.jpg";
-// document.getElementById("wayne").append(wayne_img);
-
 
 // BONUS 2 - organizzare i singoli membri in card / schede
 let contenitore_el = document.getElementById("contenitore");
 
 for (let members of our_team) {
 contenitore_el.innerHTML += `
-    <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="PUT IMG HERE">
+<div class="col-4 d-flex justify-content-center">
+    <div class="card mt-3" style="width: 18rem;">
+        <img src="${members.photo}" alt="PUT IMG HERE">
 
-            <div class="card-body">
-                <h5 class="card-title">${members.name}</h5>
-                <p class="card-text">${members.role}</p>
-            </div>
+        <div class="card-body text-center">
+            <h5 class="card-title">${members.name}</h5>
+            <p class="card-text">${members.role}</p>
+        </div>
     </div>
+</div>
 `
 };
