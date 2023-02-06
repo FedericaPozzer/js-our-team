@@ -14,10 +14,8 @@
 // Scott Estrada		Developer				scott - estrada - developer.jpg
 // Barbara Ramos		Graphic Designer		barbara - ramos - graphic - designer.jpg
 
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
-// BONUS 2:
-// Organizzare i singoli membri in card / schede
+// BONUS 1: trasformare la stringa foto in una immagine effettiva -- BOH
+// BONUS 2: organizzare i singoli membri in card / schede
 
 
 // Creo un array di oggetti
@@ -26,6 +24,8 @@ let our_team = [
         name : "Wayne Barnett",
         role : "Founder & CEO",
         photo : "./img/wayne-barnett-founder-ceo.jpg",
+        // photo : wayne_img,
+        // photo : (src = "../img/wayne-barnett-founder-ceo.jpg"),
     },
     {   // ANGELA C.
         name: "Angela Carroll",
@@ -81,21 +81,40 @@ for (let people of our_team) {
 
 
 
-// MILESTONE 2: stampare le stesse informazioni su DOM sottoforma di stringhe
-// stampo Wayne
-document.querySelector(".wayne").innerHTML = our_team[0].name + ", " + our_team[0].role + " --- " + our_team[0].photo
-// stampo Angela C.
-document.querySelector(".angela-c").innerHTML = our_team[1].name + ", " + our_team[1].role + " --- " + our_team[1].photo;
-// stampo Walter
-document.querySelector(".walter").innerHTML = our_team[2].name + ", " + our_team[2].role + " --- " + our_team[2].photo;
-// stampo Angela L.
-document.querySelector(".angela-l").innerHTML = our_team[3].name + ", " + our_team[3].role + " --- " + our_team[3].photo;
-// stampo Scott
-document.querySelector(".scott").innerHTML = our_team[4].name + ", " + our_team[4].role + " --- " + our_team[4].photo;
-// stampo Barbara
-document.querySelector(".barbara").innerHTML = our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo;
+// MILESTONE 2: stampare le stesse informazioni su DOM sottoforma di stringhe 
+
+// // stampo Wayne
+// document.querySelector(".wayne").innerHTML = our_team[0].name + ", " + our_team[0].role + " --- " + our_team[0].photo
+// // stampo Angela C.
+// document.querySelector(".angela-c").innerHTML = our_team[1].name + ", " + our_team[1].role + " --- " + our_team[1].photo;
+// // stampo Walter
+// document.querySelector(".walter").innerHTML = our_team[2].name + ", " + our_team[2].role + " --- " + our_team[2].photo;
+// // stampo Angela L.
+// document.querySelector(".angela-l").innerHTML = our_team[3].name + ", " + our_team[3].role + " --- " + our_team[3].photo;
+// // stampo Scott
+// document.querySelector(".scott").innerHTML = our_team[4].name + ", " + our_team[4].role + " --- " + our_team[4].photo;
+// // stampo Barbara
+// document.querySelector(".barbara").innerHTML = our_team[5].name + ", " + our_team[5].role + " --- " + our_team[5].photo;
 
 
+// BONUS 1 - boh
+// let wayne_img = new Image(200, 200);
+// wayne_img.src ="../img/wayne-barnett-founder-ceo.jpg";
+// document.getElementById("wayne").append(wayne_img);
 
 
+// BONUS 2 - organizzare i singoli membri in card / schede
+let contenitore_el = document.getElementById("contenitore");
 
+for (let members of our_team) {
+contenitore_el.innerHTML += `
+    <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="PUT IMG HERE">
+
+            <div class="card-body">
+                <h5 class="card-title">${members.name}</h5>
+                <p class="card-text">${members.role}</p>
+            </div>
+    </div>
+`
+};
