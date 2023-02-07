@@ -75,6 +75,11 @@ let our_team = [
 // siccome è un array si usa OF (IN è per il "for in" degli objects)
 for (let people of our_team) {
     console.log(people);
+
+    // OR.. separatamente :)
+    // console.log("name: " + people.name);
+    // console.log("role: " + people.role);
+    // console.log("photo: " + people.photo);
 }
 
 
@@ -100,17 +105,21 @@ for (let people of our_team) {
 // BONUS 2 - organizzare i singoli membri in card / schede
 let contenitore_el = document.getElementById("contenitore");
 
-for (let members of our_team) {
+for (let member of our_team) {
 contenitore_el.innerHTML += `
 <div class="col-4 d-flex justify-content-center">
     <div class="card mt-3" style="width: 18rem;">
-        <img src="${members.photo}" alt="PUT IMG HERE">
+        <img src="${member.photo}" alt="PUT IMG HERE">
 
         <div class="card-body text-center">
-            <h5 class="card-title">${members.name}</h5>
-            <p class="card-text">${members.role}</p>
+            <h5 class="card-title">${member.name}</h5>
+            <p class="card-text">${member.role}</p>
         </div>
     </div>
 </div>
 `
 };
+
+
+
+// l'immagine funziona "perchè sono fortunata :D", dovevo metterla direttamente nel template literal ./img/${member.photo} con un solo punto perchè si parte dall'HTML (ovviamente così, però lasciando il nome originale così --> wayne-barnett-founder-ceo.jpg).
